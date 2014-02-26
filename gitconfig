@@ -1,0 +1,9 @@
+[user]
+	name = DaJoker29
+	email = dj729@comcast.net
+[credential]
+	helper = cache
+[push]
+	default = matching
+[alias]
+	glog = log --all --color --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
