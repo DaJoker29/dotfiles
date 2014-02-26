@@ -4,6 +4,6 @@
 [credential]
 	helper = cache
 [push]
-	default = matching
+	default = simple
 [alias]
-	glog = log --all --color --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+	glog = log --all --decorate --graph --color --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

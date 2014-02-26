@@ -43,6 +43,7 @@ alias dev='cd /var/www/dev';
 alias theme='cd /var/www/warzone/wp-content/themes';
 alias hist='cat ~/.scripts/log';
 alias irssi='screen irssi';
+alias glog='git glog';
 
 PATH=$PATH:/home/dajoker29/.scripts/
 export PATH
