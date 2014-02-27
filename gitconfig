@@ -65,6 +65,7 @@
     ls = ls-files
     lsf = "!git ls-files | grep -i"
     m = merge
+    mff = merge --no-ff
     ma = merge --abort
     mc = merge --continue
     ms = merge --skip
