@@ -7,3 +7,11 @@
 	default = simple
 [alias]
 	glog = log --all --decorate --graph --color --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    st = status
+    co = checkout
+    br = branch
+    com = commit
+[core]
+    editor = vim
+[color]
+    ui = always
