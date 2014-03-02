@@ -126,7 +126,7 @@
     sp = stash pop
     ss = stash save
     sw = stash show
-	today = log --since=midnight --author='DaJoker29' --oneline
+	today = log --since=midnight --author='Dewitt Buckingham' --oneline
     w = show
     wp = show -p
     wr = show -p --no-color

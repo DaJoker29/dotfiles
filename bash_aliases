@@ -5,13 +5,9 @@ alias lla='ls -la';
 alias ..='cd ..';
 alias ...='cd ../..';
 alias ....='cd ../../..';
-alias .....='cd ../../..';
+alias .....='cd ../../../..';
 alias vim='vim -p';
 alias com='compass watch .';
-alias hist='cat ~/.scripts/log';
-alias irssi='screen irssi';
-
-#Shortcuts
 alias hist='cat ~/.scripts/log';
 alias irssi='screen irssi';
 
@@ -42,7 +38,7 @@ alias backup='rsync -avz shadow:/home/dajoker29/ ~/Stora/server_backup/';
 
 #Local Dev Server
 alias www='cd /var/www';
-alias muzik='cd /var/www/muzik';
+alias muzik='cd /var/www/designs/compound-muzik-design';
 alias zdae='cd /var/www/zdae';
 alias vim='vim -p';
 alias com='compass watch .';
@@ -54,11 +50,11 @@ alias dev='cd /var/www/dev';
 alias theme='cd /var/www/warzone/wp-content/themes';
 
 #Git
-alias ga='git add -A';
-alias gc="git commit -m $*";
+alias ga='git a';
+alias gc="git cam $*";
 alias glog='git glog';
 alias gb='git checkout -b $1 $2';
-alias gbd='git checkout develop; git branch -d $1';
-alias gch='git checkout $1';
-alias gs='git status';
+alias gbd='git o develop; git bd $1';
+alias gch='git o $1';
+alias gs='git s';
 
