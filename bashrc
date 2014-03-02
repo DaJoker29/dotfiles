@@ -102,6 +102,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+#Setting Path
+
+scriptDir=/home/dajoker29/.scripts/
+if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir; export PATH; fi
+export PATH=$HOME/local/bin:$PATH
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -112,8 +118,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#Setting Path
 
-scriptDir=/home/dajoker29/.scripts/
-if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir; export PATH; fi
-export PATH=$HOME/local/bin:$PATH
+source ~/.git-completion.sh
