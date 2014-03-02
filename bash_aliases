@@ -57,4 +57,7 @@ alias gb='git checkout -b $1 $2';
 alias gbd='git o develop; git bd $1';
 alias gch='git o $1';
 alias gs='git s';
+alias today='git today';
+alias gps='git ps';
+alias gpl='git pl';
 
