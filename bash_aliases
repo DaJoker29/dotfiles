@@ -10,6 +10,8 @@ alias vim='vim -p';
 alias com='compass watch .';
 alias hist='cat ~/.scripts/log';
 alias irssi='screen irssi';
+alias src='cd /home/dajoker29/source';
+alias dots='cd /home/dajoker29/source/dotfiles';
 
 #Custom Functions
 function md() {
