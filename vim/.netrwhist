@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/var/www/compound-theme/src/less/bootstrap'
-let g:netrw_dirhist_2='/var/www/compound-theme/.git/branches'
-let g:netrw_dirhist_3='/var/www/compound-theme/.git/refs'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/dajoker29/.irssi'
+let g:netrw_dirhist_2='/var/www/tic-tac-toe/js'
+let g:netrw_dirhist_3='/var/www/bjorn'
+let g:netrw_dirhist_4='/home/dajoker29/source/node/src/res'
+let g:netrw_dirhist_5='/var/www/designs/compound-muzik-design/sass'
+let g:netrw_dirhist_6='/var/www/designs/compound-muzik-design/css'
+let g:netrw_dirhist_7='/var/www/designs/compound-muzik-design/src/less/bootstrap'

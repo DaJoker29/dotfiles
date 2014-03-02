@@ -6,7 +6,9 @@
 [push]
 	default = simple
 [core]
-    editor = vim
+	editor = vim
+[merge]
+	tool = vimdiff
 [color]
     ui = always
 [color "branch"]
@@ -124,6 +126,7 @@
     sp = stash pop
     ss = stash save
     sw = stash show
+	today = log --since=midnight --author='DaJoker29' --oneline
     w = show
     wp = show -p
     wr = show -p --no-color
