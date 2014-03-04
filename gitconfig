@@ -3,8 +3,6 @@
 	email = dj729@comcast.net
 [credential]
 	helper = cache
-[push]
-	default = simple
 [core]
 	editor = vim
 [merge]
