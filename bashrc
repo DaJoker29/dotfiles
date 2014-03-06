@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\e[0;32m[\t] \e[1;34m\u\e[0;34m@\h \e[1;35m\w\n \e[1;33m(.Y.) \e[1;31m\$ \e[0m'
+    PS1='\[\e[0;32m\][\t] \[\e[1;34m\]\u\[\e[0;34m\]@\h \[\e[1;35m\]\w\n \[\e[1;33m\](.Y.) \[\e[1;31m\]\$ \[\e[0m\]'
     PS1='$(__git_ps1 "\[\e[1;32m\](%s) \[\e[0m\]")'$PS1
 else
     PS1='$(__git_ps1 "(%s)")[\t] \u@\h \w\n (.Y.) \$ '
