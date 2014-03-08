@@ -218,13 +218,12 @@ Prompt="$"
 # This PS1 snippet was adopted from code for MAC/BSD I saw from: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
 # I tweaked it to work on UBUNTU 11.04 & 11.10 plus made it mo' better
 
-    PS1='\[\e[0;32m\][\t] \[\e[1;34m\]\u\[\e[0;34m\]@\h \[\e[1;35m\]\w\n \[\e[1;33m\](.Y.) \[\e[1;31m\]\$ \[\e[0m\]'
 export PS1=$Green[$Time12h]$Space$BBlue$Username$Blue@$Host$Color_Off'$(git branch &>/dev/null;\
     if [ $? -eq 0 ]; then \
         echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
         if [ "$?" -eq "0" ]; then \
             # @4 - Clean repository - nothing to commit
-            echo "'$BIGreen'"$(__git_ps1 " (%s)"); \
+            echo "'$BIGreen'"$(__git_ps1 " {%s}"); \
         else \
             # @5 - Changes to working tree
             echo "'$BIYellow'"$(__git_ps1 " {%s}"); \
