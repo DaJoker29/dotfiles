@@ -30,7 +30,7 @@
 [difftool]
     prompt = false
 [alias]
-    a = add .
+    a = add -A
     ai = add -i
     ap = apply
     as = apply --stat
