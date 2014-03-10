@@ -232,3 +232,7 @@ export PS1=$Green[$Time12h]$Space$BBlue$Username$Blue@$Host$Color_Off'$(git bran
             # @2 - Prompt when not in GIT repo
             echo " '$BPurple$PathShort$Color_Off'"; \
             fi)'$NewLine$BYellow$Boobs$Space$IRed$Prompt$Color_Off$Space
+
+
+# Add a welcome message for each terminal instance
+echo "Ahoy, Captain!"
