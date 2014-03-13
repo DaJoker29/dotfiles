@@ -1,4 +1,7 @@
 #!/bin/bash
+#   Rollout - Dotfile Automation Script
+#   Dynamically symlinks all files and directories in
+#   dots/ folder (overwriting any files that exist)
 
 #Variables/Constants
 
@@ -6,9 +9,9 @@ REPO=$(cd $( dirname "${BASH_SOURCE[0]}" ) && pwd );
 PREFIX=".";
 DOTDIR=$REPO/dots;
 DOTS=$(ls $DOTDIR);
-FILECOUNT=0;
-LINKCOUNT=0;
-DIRCOUNT=0;
+filecount=0;
+linkcount=0;
+dircount=0;
 
 
 for dot in $DOTS
@@ -16,19 +19,19 @@ do
     dest=$HOME/$PREFIX$dot;
     if [ -f $dest ]
     then
-       echo "$dot: File Already Exists. Overwriting."; 
+       echo "$dot: Overwriting."; 
        rm -f $dest;
-       let "FILECOUNT+=1";
+       let "filecount+=1";
     elif [ -L $dest ]
     then
-       echo "$dot: Link Already Exists. Overwriting."; 
+       echo "$dot: Overwriting."; 
        rm -f $dest;
-       let "LINKCOUNT+=1";
+       let "linkcount+=1";
     elif [ -d $dest ]
     then
-       echo "$dot: Directory Already Exists. Overwriting."; 
+       echo "$dot: Overwriting."; 
        rm -Rf $dest/;
-       let "DIRCOUNT+=1";
+       let "dircount+=1";
     fi
 
     if ln -s $DOTDIR/$dot $dest; then
@@ -37,4 +40,4 @@ do
         echo "$dot: Linking Failed";
     fi
 done
-echo -e "-------\nOverwritten: $FILECOUNT files - $LINKCOUNT links - $DIRCOUNT dirs";
+echo -e "-------\nOverwritten: $filecount files - $linkcount links - $dircount dirs";
