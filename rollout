@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#Variables/Constants
+
+REPO=$(cd $( dirname "${BASH_SOURCE[0]}" ) && pwd );
+PREFIX=".";
+DOTDIR=$REPO/dots;
+DOTS=$(ls $DOTDIR);
+FILECOUNT=0;
+LINKCOUNT=0;
+DIRCOUNT=0;
+
+
+for dot in $DOTS
+do
+    dest=$HOME/$PREFIX$dot;
+    if [ -f $dest ]
+    then
+       echo "$dot: File Already Exists. Overwriting."; 
+       rm -f $dest;
+       let "FILECOUNT+=1";
+    elif [ -L $dest ]
+    then
+       echo "$dot: Link Already Exists. Overwriting."; 
+       rm -f $dest;
+       let "LINKCOUNT+=1";
+    elif [ -d $dest ]
+    then
+       echo "$dot: Directory Already Exists. Overwriting."; 
+       rm -Rf $dest/;
+       let "DIRCOUNT+=1";
+    fi
+
+    if ln -s $DOTDIR/$dot $dest; then
+        echo "$dot: Successfully Linked";
+    else
+        echo "$dot: Linking Failed";
+    fi
+done
+echo -e "-------\nOverwritten: $FILECOUNT files - $LINKCOUNT links - $DIRCOUNT dirs";
