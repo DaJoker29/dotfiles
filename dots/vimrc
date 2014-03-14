@@ -70,6 +70,9 @@ nmap <leader>q :q!<cr>
 " Fast saving and quitting
 nmap <leader>wq :wq!<cr>
 
+" Allows writing to files with root privileges
+cmap w!! w !sudo tee % > /dev/null
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
