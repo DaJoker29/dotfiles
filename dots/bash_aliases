@@ -26,10 +26,10 @@ function pastebin() {
     local content="$(cat)"; 
     local sha="$(sha1sum <<< "$content")"; 
     local fname="${sha:0:6}"; 
-    local url="http://zerodaedalus.com/pastes/$fname"; 
-    local dest="/var/www/pastes"; 
+    local url="http://staging.zerodaedalus.com/pastes/$fname"; 
+    local dest="/home/dajoker29/public/staging.zerodaedalus.net/public/pastes"; 
     printf "Destination: %s\nURL: %s\n" "$dest/$fname" "$url"; 
-    ssh dajoker29@shadow dd of="$dest/$fname" <<< "$content"; 
+    ssh dajoker29@warzone dd of="$dest/$fname" <<< "$content"; 
     xclip <<< "$url"; 
     xclip -sel clipboard <<< "$url";
 }
