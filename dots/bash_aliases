@@ -36,6 +36,7 @@ function pastebin() {
 
 #Remotes/Servers
 alias storalink='sshfs stora:/home/dajoker29/ ~/Stora/';
+alias storadown='ssh -t stora sudo shutdown -h now';
 alias backup='rsync -avz shadow:/home/dajoker29/ ~/Stora/server_backup/';
 
 #Local Dev Server
