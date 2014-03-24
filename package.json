@@ -1,0 +1,24 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.0",
+  "description": "Personalized Config Files",
+  "main": "rollout",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dajoker29/dotfiles.git"
+  },
+  "keywords": [
+    "dots",
+    "bash",
+    "shell"
+  ],
+  "author": "Dewitt A. Buckingham III",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/dajoker29/dotfiles/issues"
+  },
+  "homepage": "https://github.com/dajoker29/dotfiles"
+}
