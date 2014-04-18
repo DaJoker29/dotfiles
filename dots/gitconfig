@@ -62,7 +62,7 @@
     fp = format-patch
     fk = fsck
     g = grep -p
-	glog = log --all --decorate --graph --color --pretty=format:'%C(auto)%h ->%d%Creset %C(white)%s%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	glog = log --all --decorate --graph --color --pretty=format:'%C(auto)%h ->%d %s%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     l = log --oneline
     ls = ls-files
     lsf = "!git ls-files | grep -i"
