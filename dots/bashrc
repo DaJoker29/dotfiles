@@ -102,7 +102,7 @@ fi
 
 #Setting Path
 
-scriptDir=/home/dajoker29/.scripts/
+scriptDir=$HOME/.scripts/
 if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir; export PATH; fi
 
 # enable programmable completion features (you don't need to enable
@@ -117,8 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # Add git completion
-source /home/dajoker29/source/git/contrib/completion/git-completion.bash
-source /home/dajoker29/source/git/contrib/completion/git-prompt.sh
+source $HOME/source/git/contrib/completion/git-completion.bash
+source $HOME/source/git/contrib/completion/git-prompt.sh
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
