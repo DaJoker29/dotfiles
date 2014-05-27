@@ -5,7 +5,13 @@
 
 #Variables/Constants
 
-REPO=$(cd $( dirname "${BASH_SOURCE[0]}" ) && pwd );
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+    DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd)"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+REPO="$(cd "$( dirname "$SOURCE" )" && pwd )"
 PREFIX=".";
 DOTDIR=$REPO/dots;
 DOTS=$(ls $DOTDIR);
