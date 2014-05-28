@@ -64,3 +64,6 @@ alias today='git today';
 alias gps='git ps';
 alias gpl='git pl';
 
+#Random Stuff
+alias mat='matrix';
+alias starwars='telnet towel.blinkenlights.nl';
