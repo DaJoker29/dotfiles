@@ -128,3 +128,5 @@
     w = show
     wp = show -p
     wr = show -p --no-color
+[push]
+	default = matching
