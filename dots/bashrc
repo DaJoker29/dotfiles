@@ -106,8 +106,6 @@ fi
 
 scriptDir=$HOME/.scripts/
 if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir; export PATH; fi
-binDir=$HOME/bin/
-if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$binDir"); then PATH=$PATH:$binDir; export PATH; fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
