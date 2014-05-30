@@ -121,8 +121,11 @@ if ! shopt -oq posix; then
 fi
 
 # Add git completion
-source $HOME/source/git/contrib/completion/git-completion.bash
-source $HOME/source/git/contrib/completion/git-prompt.sh
+ROOT_UID=0
+if ! [ "$UID" -eq "$ROOT_UID" ]; then
+    source $HOME/source/git/contrib/completion/git-completion.bash
+    source $HOME/source/git/contrib/completion/git-prompt.sh
+fi
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
@@ -218,6 +221,8 @@ Jobs="\j"
 Space=" "
 Boobs="(.Y.)"
 Prompt='\$'
+
+#Change Username in PS1 depending on current user
 
 USER_ID=`id -u`
 if [ "$USER_ID" == "0" ]; then
