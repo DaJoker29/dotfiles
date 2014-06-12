@@ -105,7 +105,9 @@ fi
 #Setting Path
 
 scriptDir=$HOME/.scripts/
+androidDir=$HOME/android/tools/:$HOME/android/platform-tools/
 if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir; export PATH; fi
+if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$androidDir") ; then PATH=$PATH:$androidDir; export PATH; fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
