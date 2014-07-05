@@ -38,6 +38,8 @@ function pastebin() {
 alias storalink='sshfs stora:/home/dajoker29/ ~/Stora/';
 alias storadown='ssh -t stora sudo shutdown -h now';
 alias backup='rsync -avz shadow:/home/dajoker29/ ~/Stora/server_backup/';
+alias mongod='mongod --config /etc/mongod.conf --fork';
+alias mongodown='mongod --shutdown';
 
 #Local Dev Server
 alias www='cd /var/www';

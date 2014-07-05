@@ -259,7 +259,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ \ Col:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -418,3 +418,11 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+
+au BufReadPost *.twig colorscheme koehler 
+au BufReadPost *.css colorscheme slate 
+au BufReadPost *.js colorscheme elflord 
+au BufReadPost *.py colorscheme molokai
+au BufReadPost *.html colorscheme monokai
+au BufReadPost *.java colorscheme monokai
+"au BufReadPost *.php colorscheme two2tango
