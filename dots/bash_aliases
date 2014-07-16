@@ -11,7 +11,7 @@ alias com='compass watch .';
 alias hist='cat ~/.scripts/log';
 alias irssi='screen irssi';
 alias src='cd $HOME/source';
-alias dots='cd ~/source/dotfiles';
+alias dots='cd ~/source/dotfiles/dots';
 
 #Custom Functions
 function md() {
@@ -53,6 +53,7 @@ alias jp='cd /var/www/warzone/wp-content/themes/julian-paul';
 alias tic='cd /var/www/tic-tac-toe';
 alias dev='cd /var/www/dev';
 alias theme='cd /var/www/warzone/wp-content/themes';
+alias work='cd ~/workspace';
 
 #Git
 alias ga='git a';
