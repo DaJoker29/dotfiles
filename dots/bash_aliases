@@ -13,6 +13,9 @@ alias irssi='screen irssi';
 alias src='cd $HOME/source';
 alias dots='cd ~/source/dotfiles/dots';
 
+#T (Twitter interface)
+alias tweets='t timeline -n 12';
+
 #Custom Functions
 function md() {
     mkdir -pv $1 && cd $1

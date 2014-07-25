@@ -256,3 +256,6 @@ export PS1=$Green[$Time24h]$Space$BEGIN_ROOT$Username$Blue@$Host$Color_Off'$(git
 
 # Add a welcome message for each terminal instance
 echo "Ahoy, Captain!"
+
+# Show Twitter stream when terminal opens
+tweets
