@@ -15,6 +15,7 @@ alias dots='cd ~/source/dotfiles/dots';
 
 #T (Twitter interface)
 alias tweets='t timeline -n 12';
+alias stream='t stream timeline';
 
 #Custom Functions
 function md() {
