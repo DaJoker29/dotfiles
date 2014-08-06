@@ -357,6 +357,7 @@ noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^
 imap <silent> <Home> <C-O><Home>
 execute pathogen#infect()
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

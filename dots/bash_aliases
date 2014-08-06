@@ -61,7 +61,7 @@ alias work='cd ~/workspace';
 
 #Git
 alias ga='git a';
-alias gc="git cam $*";
+alias gc="git ca";
 alias glog='git glog';
 alias gb='git checkout -b $1 $2';
 alias gbd='git o develop; git bd $1';
