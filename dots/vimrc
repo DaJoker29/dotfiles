@@ -427,3 +427,6 @@ au BufReadPost *.py colorscheme molokai
 au BufReadPost *.html colorscheme monokai
 au BufReadPost *.java colorscheme monokai
 "au BufReadPost *.php colorscheme two2tango
+
+" Turn off auto comment thing
+autocmd FileType * setlocal comments-=:// comments+=f://
