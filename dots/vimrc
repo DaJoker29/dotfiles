@@ -181,9 +181,14 @@ set lbr
 set tw=500
 
 set ai "Auto indent
-set si "Smart indent
+set ci "C indent
 set wrap "Wrap lines
 set foldmethod=indent
+
+" Make cursor jump to inside block when Entered
+inoremap {<cr> {<cr>}<c-o>O
+inoremap [<cr> [<cr>]<c-o>O
+inoremap (<cr> (<cr>)<c-o>O
 
 
 """"""""""""""""""""""""""""""
@@ -430,3 +435,5 @@ au BufReadPost *.java colorscheme monokai
 
 " Turn off auto comment thing
 autocmd FileType * setlocal comments-=:// comments+=f://
+
+
