@@ -106,7 +106,9 @@ fi
 
 scriptDir=$HOME/.scripts/
 androidDir=$HOME/android/tools/:$HOME/android/platform-tools/
-if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$PATH:$scriptDir:$androidDir; export PATH; fi
+nodeDir=$HOME/npm/bin/
+comb=$scriptDir:$androidDir:$nodeDir
+if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$comb:$PATH; export PATH; fi
 
 # SETTING ENVIRONMENT 
 export NODE_ENV=development
