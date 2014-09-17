@@ -226,37 +226,37 @@ Space=" "
 Boobs="(.Y.)"
 Prompt='\$'
 Slash="/"
-Spacer=" // "
+Spacer="$BIBlack // "
 Date="\d"
 
 #Change Username in PS1 depending on current user
 
 USER_ID=`id -u`
 if [ "$USER_ID" == "0" ]; then
-    BEGIN_ROOT=$BRed
+    BEGIN_ROOT=$Red
 elif [ "$USER_ID" == "1000" ]; then
-    BEGIN_ROOT=$BGreen
+    BEGIN_ROOT=$Blue
 else
-    BEGIN_ROOT=$BBlue
+    BEGIN_ROOT=$Green
 fi
 
 # This PS1 snippet was adopted from code for MAC/BSD I saw from: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
 # I tweaked it to work on UBUNTU 11.04 & 11.10 plus made it mo' better
 
-export PS1=$BCyan$Date$Spacer$Green$Time24h$Spacer$BEGIN_ROOT$Username$Blue@$Host$Spacer$Color_Off'$(git branch &>/dev/null;\
+export PS1=$IWhite$Date$Spacer$Green$Time24h$Spacer$BEGIN_ROOT$Username$IBlue@$Host$Spacer$BPurple$PathShort'$(git branch &>/dev/null;\
     if [ $? -eq 0 ]; then \
         echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
         if [ "$?" -eq "0" ]; then \
             # @4 - Clean repository - nothing to commit
-            echo "'$BIGreen'"$(__git_ps1 "{%s}"); \
+            echo "'$Spacer$Color_Off$IGreen'"$(__git_ps1 "{%s}"); \
         else \
             # @5 - Changes to working tree
-            echo "'$BIYellow'"$(__git_ps1 "{%s}"); \
-            fi) '$BPurple$PathShort$Color_Off'"; \
+            echo "'$Spacer$Color_Off$IYellow'"$(__git_ps1 "{%s}"); \
+            fi) '$Color_Off'"; \
         else \
             # @2 - Prompt when not in GIT repo
-            echo "'$BPurple$PathShort$Color_Off'"; \
-            fi)'$NewLine$BYellow$Space$Boobs$Space$IRed$Prompt$Color_Off$Space
+            echo "'$Color_Off'"; \
+            fi)'$NewLine$Yellow$Space$Space$Space$Space$BIRed$Prompt$Space$Color_Off
 
 
 # Add a welcome message for each terminal instance
