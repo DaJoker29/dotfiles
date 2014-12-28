@@ -1,6 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
 
 # If not running interactively, don't do anything
 case $- in
@@ -101,14 +104,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-#Setting Path
-
-scriptDir=$HOME/.scripts/
-androidDir=$HOME/android/tools/:$HOME/android/platform-tools/
-nodeDir=$HOME/npm/bin/
-comb=$scriptDir:$androidDir:$nodeDir
-if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$comb:$PATH; export PATH; fi
 
 # SETTING ENVIRONMENT 
 export NODE_ENV=development

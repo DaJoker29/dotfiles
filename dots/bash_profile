@@ -1,0 +1,9 @@
+#Setting Path
+
+scriptDir=$HOME/.scripts/
+androidDir=$HOME/android/tools/:$HOME/android/platform-tools/
+nodeDir=$HOME/npm/bin/
+compDir=$HOME/.composer/vendor/bin/
+comb=$compDir:$scriptDir:$androidDir:$nodeDir
+if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$comb:$PATH; export PATH; fi
+
