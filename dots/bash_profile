@@ -8,6 +8,6 @@ comb=$compDir:$scriptDir:$androidDir:$nodeDir
 if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$comb:$PATH; export PATH; fi
 
 # Check for .bashrc and load it
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
