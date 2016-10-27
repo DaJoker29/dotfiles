@@ -1,5 +1,9 @@
 prefix=/home/dajoker29/npm
-init.author.name="Dewitt A. Buckingham, III"
-init.author.email="captain@zerodaedalus.net"
-init.author.url="http://zerodaedalus.com"
-init.license="GPLv2"
+init.author.name=Dewitt A. Buckingham, III
+init.author.email=captain@zerodaedalus.net
+init.author.url=http://zerodaedalus.com
+init.license=MIT
+progress=true
+save=true
+save-exact=true
+license=MIT
