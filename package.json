@@ -4,7 +4,7 @@
   "description": "Personalized Config Files",
   "main": "rollout",
   "scripts": {
-    "install": "exec ./rollouti && exec bash",
+    "install": "exec ./rollout && exec bash",
     "postversion": "git push && git push --tags && exec bash"
   },
   "repository": {
