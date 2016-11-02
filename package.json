@@ -4,7 +4,8 @@
   "description": "Personalized Config Files",
   "main": "rollout",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "exec ./rollout",
+    "postversion": "git push && git push --tags && exec bash"
   },
   "repository": {
     "type": "git",
