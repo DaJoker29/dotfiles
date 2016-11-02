@@ -3,12 +3,14 @@
 scriptDir=$HOME/.scripts/
 androidDir=$HOME/android/tools/:$HOME/android/platform-tools/
 nodeDir=$HOME/npm/bin/
-yarnDir=$HOME/.yarn/bin
+yarnDir=$HOME/.yarn/bin/
 compDir=$HOME/.composer/vendor/bin/
-comb=$compDir:$scriptDir:$androidDir:$nodeDir
+comb=$compDir:$scriptDir:$androidDir:$nodeDir:$yarnDir
 if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$scriptDir") ; then PATH=$comb:$PATH; export PATH; fi
 
 # Check for .bashrc and load it
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
