@@ -1,10 +1,11 @@
 {
   "name": "dotfiles",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "Personalized Config Files",
   "main": "rollout",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "exec ./rollout && exec bash",
+    "postversion": "git push && git push --tags && exec bash"
   },
   "repository": {
     "type": "git",

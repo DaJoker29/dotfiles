@@ -44,6 +44,7 @@ alias storadown='ssh -t stora sudo shutdown -h now';
 alias backup='rsync -avz shadow:/home/dajoker29/ ~/Stora/server_backup/';
 alias mongod='mongod --config /etc/mongod.conf --fork';
 alias mongodown='mongod --shutdown';
+alias warzone="ssh -t warzone 'exec bash'";
 
 #Local Dev Server
 alias www='cd /var/www';
@@ -51,7 +52,6 @@ alias muzik='cd /var/www/designs/compound-muzik-design';
 alias zdae='cd /var/www/zdae';
 alias vim='vim -p';
 alias com='compass watch .';
-alias warzone='cd /var/www/warzone';
 alias narc='cd /var/www/warzone/wp-content/themes/narcissus';
 alias jp='cd /var/www/warzone/wp-content/themes/julian-paul';
 alias tic='cd /var/www/tic-tac-toe';
@@ -74,3 +74,5 @@ alias gpl='git pl';
 #Random Stuff
 alias mat='matrix';
 alias starwars='telnet towel.blinkenlights.nl';
+alias python=python3
+alias pip=pip3
