@@ -74,3 +74,5 @@ alias gpl='git pl';
 #Random Stuff
 alias mat='matrix';
 alias starwars='telnet towel.blinkenlights.nl';
+alias python=python3
+alias pip=pip3
